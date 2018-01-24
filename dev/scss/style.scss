@@ -88,6 +88,9 @@
 		color: white;
 		font-size: 15px;
 		margin: 20px;
+		&:hover{
+			background-color: #f26522;
+		}
 	}
 	&__title{
 		font-size: 35px;
@@ -130,7 +133,10 @@
 		margin-top: 65px;
 	}
 }
-
+.lower-block{
+	position: relative;
+	top: -135px;
+}
 .block{
 	color:#000;
 	background: #fff;
