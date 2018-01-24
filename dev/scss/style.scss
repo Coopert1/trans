@@ -1,0 +1,64 @@
+@mixin breakpoint($point) {
+	@if $point == desktop {
+		@media (min-width: 70em) { @content ; }
+	}
+	@else if $point == laptop {
+		@media (min-width: 64em) { @content ; }
+	}
+	@else if $point == tablet {
+		@media (min-width: 50em) { @content ; }
+	}
+	@else if $point == phablet {
+		@media (min-width: 37.5em) { @content ; }
+	}
+	@else if $point == mobileonly {
+		@media (max-width: 37.5em) { @content ; }
+	}
+}
+*{
+	font-family: 'Open Sans', sans-serif;
+	img{
+		max-width: 100%;
+	}
+	a{
+		text-decoration: none;
+	}
+}
+.header{
+	padding-top: 64px;
+	position: relative;
+	background: url('../images/background.png');
+	background-size: auto;
+}
+.logo{
+	position: absolute;
+	right:64px;
+	top:64px;
+}
+.menu{
+	color:#fff;
+	margin-bottom: 375px;
+	ul{
+		list-style: none;
+	}
+	li{
+		padding: 10px;
+		font-family: 'Raleway', sans-serif;
+		text-transform: uppercase;
+		display:inline-block;
+		margin-right: 45px;
+		border-bottom: 2px solid transparent;
+	}
+	li:hover{
+		border-bottom: 2px solid #f26522;
+	}
+	a{
+		color:#fff;
+		display:block;
+		border-bottom: 2px solid transparent;
+		@include breakpoint(phablet){
+			display: inline-block;
+			width: auto;
+		}
+	}
+}
