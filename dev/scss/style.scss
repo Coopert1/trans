@@ -29,6 +29,8 @@
 	position: relative;
 	background: url('../images/background.png');
 	background-size: auto;
+	padding-bottom: 400px;
+	// background-repeat: no-repeat;
 }
 .logo{
 	position: absolute;
@@ -37,7 +39,7 @@
 }
 .menu{
 	color:#fff;
-	margin-bottom: 575px;
+	margin-bottom: 75px;
 	ul{
 		list-style: none;
 	}
@@ -75,22 +77,23 @@
 	}
 	&__text{
 		font-size: 14px;
-		// background: #fff;
 		font-family: 'Open Sans', sans-serif;
 	}
 	p{
 		margin-bottom: 45px;
 	}
 	&_orange{
-		height: 740px;
 		background: #f26522;
 		color: #fff;
-		// background: none;
 		padding: 65px 45px;
+		@include breakpoint(tablet){
+			height: 740px;
+		}
 	}
 }
 .header-info{
 	position: relative;
 	right: 0;
 	bottom: 388;
+	margin-bottom: -360px;
 }

@@ -46,7 +46,7 @@
 
 
 .row{
-	margin: 0 -10px;
+	margin: 0 -20px;
 	position: relative;
 }
 
@@ -84,6 +84,11 @@
 
 	&tablet-{
 		@include breakpoint(tablet){
+			&1-2{
+				padding: 0 20px;
+				width: 50%;
+				float: left;
+			}
 			&1-3{
 				width: 33.33%;
 				float: left;
