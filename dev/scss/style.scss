@@ -27,7 +27,7 @@
 .header{
 	padding-top: 64px;
 	position: relative;
-	background: url('../images/background.png');
+	background: url('/images/background.png');
 	background-size: auto;
 	padding-bottom: 400px;
 	// background-repeat: no-repeat;
@@ -73,7 +73,7 @@ form{
 	padding: 20px 10px;
 	background-color: #323339;
 	text-align: center;
-	@include breakpoint(phablet){
+	@include breakpoint(tablet){
 		padding: 60px;
 		margin: 0;
 	}
@@ -269,6 +269,12 @@ form{
 	bottom: 388;
 	margin-bottom: -360px;
 	overflow: hidden;
+}
+.header-pic{
+	margin-bottom: 35px;
+	@include breakpoint(tablet){
+		margin-bottom: 0px;
+	}
 }
 .news{
 	margin-top: -100px;
