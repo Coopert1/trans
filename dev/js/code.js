@@ -29,6 +29,9 @@ $(function(){
 				bottom = 459-difference;
 					$('.section02').css({"bottom":bottom, "margin-bottom": -bottom})
 			}
+			else {
+				$('.section02').css({"bottom":0, "margin-bottom": 0})
+			}
 		}
 	$(window).resize(function(){
 		StateMarginHeaderInfo();
