@@ -127,6 +127,40 @@ form{
 		list-style: none;
 		vertical-align: text-top;
 		margin-bottom: 50px;
+		@include breakpoint(mobileonly){
+			margin-bottom: 10px;
+		}
+		@include breakpoint(mobileonly){
+			&.chevron{
+				&:before {
+					border-style: solid ;
+					border-width: 0.25em 0.25em 0 0;
+					content: '';
+					display: inline-block;
+					height: 0.45em;
+					left: 4.15em;
+					position: relative;
+					top: 0.15em;
+					transform: rotate(-45deg);
+					vertical-align: top;
+					width: 0.45em;
+					color: #bf5828;
+				}
+				&.bottom:before {
+
+					top: 11px;
+					transform: rotate(135deg);
+				}
+			}
+			li:not(:first-child){
+				display: none;
+				
+			}
+			li{
+				//margin-bottom: 0;
+			}
+		}
+		
 		li{
 			margin-bottom: 15px;
 			a{

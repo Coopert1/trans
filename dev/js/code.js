@@ -34,6 +34,17 @@ $(function(){
 		StateMarginHeaderInfo();
 		StateMarginPic();
 		StateMarginSection02();
+		
 	})
+	
+	if($(window).width() < 600){
+			$('.chevron.bottom').click(function(e){
+				
+				e.preventDefault();
+				$(this).slideDown(500);
+				console.log("H");
+			});
+			
+		}
 
 });

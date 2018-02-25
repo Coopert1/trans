@@ -5,8 +5,8 @@ var gulp 			= require('gulp'),
 	browserSync = require("browser-sync"),
 	reload 			= browserSync.reload,
  	server     	= require('gulp-server-livereload'),
- 	watch 			= require('gulp-watch');
- 	cleancss 		= require('gulp-cleancss');
+ 	watch 			= require('gulp-watch'),
+ 	cleancss 		= require('gulp-cleancss'),
   plumber     = require('gulp-plumber');
 var livereloadPort 	= 37729;
 
