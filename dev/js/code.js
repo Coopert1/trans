@@ -2,6 +2,7 @@ $(function(){
 	StateMarginHeaderInfo();
 	StateMarginPic();
 	StateMarginSection02();
+	FooterLinksTogle();
 		function StateMarginHeaderInfo() {
 			var browserMinWidth = $(window).width()
 			if (browserMinWidth > 800) {
@@ -37,17 +38,33 @@ $(function(){
 		StateMarginHeaderInfo();
 		StateMarginPic();
 		StateMarginSection02();
-		
-	})
-	
-	if($(window).width() < 600){
-			$('.chevron.bottom').click(function(e){
-				
-				e.preventDefault();
-				$(this).slideDown(500);
-				console.log("H");
-			});
+		var browserMinWidth = $(window).width()
 			
+			if(browserMinWidth < 600){
+			
+			FooterLinksTogle();
 		}
+
+	})
+	function FooterLinksTogle() {
+		var browserMinWidth = $(window).width()
+		if(browserMinWidth < 600){
+			$('.footer ul').click(function(){
+				console.log("h");
+				
+				if( $(this).children().is(':hidden') ){
+					$(this).children().slideDown(500)
+					$(this).addClass('active')
+				}else{
+					$(this).children().slideUp(500)
+					$(this).removeClass('active')
+				}
+			});
+		}
+		else{
+			$(this).children().show();
+			$('.footer ul').onclick=null;
+		}
+	}
 
 });
