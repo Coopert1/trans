@@ -49,16 +49,10 @@ $(function(){
 	function FooterLinksTogle() {
 		var browserMinWidth = $(window).width()
 		if(browserMinWidth < 600){
-			$('.footer ul').click(function(){
-				console.log("h");
-				
-				if( $(this).children().is(':hidden') ){
-					$(this).children().slideDown(500)
-					$(this).addClass('active')
-				}else{
-					$(this).children().slideUp(500)
-					$(this).removeClass('active')
-				}
+			$(".footer ul").click(function(){
+				$(this).toggleClass("bottom")
+				$(this).children().slideToggle(500);
+				$(this).toggleClass('active');
 			});
 		}
 		else{
