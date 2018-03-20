@@ -2,7 +2,7 @@ $(function(){
 	StateMarginHeaderInfo();
 	StateMarginPic();
 	StateMarginSection02();
-	FooterLinksTogle();
+	// FooterLinksTogle();
 		function StateMarginHeaderInfo() {
 			var browserMinWidth = $(window).width()
 			if (browserMinWidth > 800) {
@@ -39,26 +39,21 @@ $(function(){
 		StateMarginPic();
 		StateMarginSection02();
 		var browserMinWidth = $(window).width()
-			
-			if(browserMinWidth < 600){
-			
-			FooterLinksTogle();
+			if(browserMinWidth > 600){
+				$('.footerlist').children().show();
 		}
 
 	})
-	function FooterLinksTogle() {
+	
+	$(".footerlist").click(function(){
 		var browserMinWidth = $(window).width()
 		if(browserMinWidth < 600){
-			$(".footer ul").click(function(){
-				$(this).toggleClass("bottom")
-				$(this).children().slideToggle(500);
-				$(this).toggleClass('active');
-			});
+			$(this).children().slideToggle(500);
+			$(this).toggleClass('active');
 		}
 		else{
 			$(this).children().show();
-			$('.footer ul').onclick=null;
+			$('.footerlist').onclick=null;
 		}
-	}
-
+	});
 });
